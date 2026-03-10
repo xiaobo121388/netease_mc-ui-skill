@@ -13,7 +13,7 @@ license: Complete terms in LICENSE.txt
 在开始编写 UI 之前，必须了解 JSON 文件的组织结构和基本概念。
 
 - **文件与命名**：每个 UI 都需要一个 JSON 文件，必须包含 `namespace` 字段。
-- **主界面与命名空间**：每个 UI 必须有一个 `main` 节点，并定义 `namespace`。
+- **主界面与命名空间**：每个 UI 必须定义 `namespace`，都应该有一个`screen`控件。
 - **继承与变量**：使用 `@` 符号继承模板控件，使用 `$` 定义和引用控件变量。
 - **全局变量与 _ui_defs**：在`_global_variables.json`中定义全局变量， 在 `_ui_defs.json` 中定义全局可用的模板和变量。
 - **属性使用**：ui高级属性介绍，如`use_anchored_offset`、`property_bag`、`variables`等。
