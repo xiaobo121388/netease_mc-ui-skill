@@ -29,7 +29,7 @@ JSON UI 提供了丰富的控件类型，用于构建各种界面元素。
 - **布局与容器**：`stack_panel` (栈式面板), `grid` (网格), `scroll_view` (滚动视图), `input_panel` (输入面板，支持拖拽和模态)。
 - **高级控件**：`paper_doll` / `netease_paper_doll` (纸娃娃模型), `item_renderer` (物品渲染), `selection_wheel` (轮盘), `netease_combo_box` (下拉框), `mini_map` (小地图)。
 
-详细内容请参考：[UI 控件](./references/UI控件.md)
+详细内容请参考：[UI 控件](./references/UI控件.md)，并且大部分控件都有Python接口调整对应的值或者回调，具体在[全部自定义UI接口](./references/全部自定义UI接口.md)通过搜索控件名称可以找到对应的接口。
 
 ## 3. 数据绑定与按钮映射
 
