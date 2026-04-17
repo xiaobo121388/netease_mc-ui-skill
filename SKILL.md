@@ -1,6 +1,6 @@
 ---
 name: netease-mc-ui
-description: "网易我的世界 JSON UI 和 Python 制作指南，包含基础知识、控件、数据绑定、事件、原生UI修改及接口参考。"
+description: "网易我的世界 JSON UI 和 Python 制作指南，包含基础知识、控件、属性动画、数据绑定、事件、原生UI修改及接口参考。"
 license: Complete terms in LICENSE.txt
 ---
 
@@ -31,7 +31,18 @@ JSON UI 提供了丰富的控件类型，用于构建各种界面元素。
 
 详细内容请参考：[UI 控件](./references/UI控件.md)，并且大部分控件都有Python接口调整对应的值或者回调，具体在[全部自定义UI接口](./references/全部自定义UI接口.md)通过搜索控件名称可以找到对应的接口。
 
-## 3. 数据绑定与按钮映射
+## 3. 控件属性动画
+
+MC 为部分 UI 控件属性提供了属性动画机制，使属性值随时间变化产生动画效果。
+
+- **支持的动画类型**：透明度 (`alpha`)、裁剪 (`clip`)、颜色 (`color`)、序列帧 (`flip_book`)、位移 (`offset`)、尺寸 (`size`)、UV (`uv`)。
+- **JSON 写法**：动画可内联写在属性值中，也可以 `"@动画名"` 引用写法实现复用。
+- **动画链与循环**：通过 `next` 属性将多段动画串联顺次播放，末段 `next` 指回链中某段可实现循环。
+- **Python 控制**：SDK 提供 `RegisterUIAnimations`、`PlayAnimation`、`PauseAnimation`、`StopAnimation`、`SetAnimation`、`RemoveAnimation`、`SetAnimEndCallback` 等接口动态控制动画。
+
+详细内容请参考：[控件属性动画](./references/控件属性动画.md)
+
+## 4. 数据绑定与按钮映射
 
 数据绑定是连接 JSON 视图和 Python 逻辑的核心机制。
 
@@ -42,7 +53,7 @@ JSON UI 提供了丰富的控件类型，用于构建各种界面元素。
 
 详细内容请参考：[数据绑定与按钮映射](./references/数据绑定.md)
 
-## 4. UI 事件
+## 5. UI 事件
 
 通过监听客户端事件，可以在合适的时机创建 UI 或响应全局交互。
 
@@ -52,7 +63,7 @@ JSON UI 提供了丰富的控件类型，用于构建各种界面元素。
 
 详细内容请参考：[UI 事件](./references/UI事件.md)
 
-## 5. 原生 UI 修改
+## 6. 原生 UI 修改
 
 除了自定义 UI，开发者经常需要修改游戏原生的界面。
 
@@ -62,7 +73,7 @@ JSON UI 提供了丰富的控件类型，用于构建各种界面元素。
 详细内容请参考：[原生 UI 修改](./references/原生UI修改.md) 
 原版UI参考：[原生UI](./templates/vanilla_ui)
 
-## 6. 接口 (API) 参考
+## 7. 接口 (API) 参考
 
 Python API 提供了操作 UI 的各种方法。
 
