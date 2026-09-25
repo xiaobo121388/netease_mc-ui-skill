@@ -63,6 +63,23 @@
 }
 ```
 
+### 示例：使用“/”符号指定子控件
+
+```json
+{
+  "namespace": "settings",
+  "section_content_panels/world_sections": {
+    "modifications": [{
+      "control_name": "debug_section",
+      "operation": "insert_after",
+      "value": {
+        "custom_section@world_section.my_mod_section": {}
+      }
+    }]
+  }
+}
+```
+
 ## 2. Python 获取原生 UI 实例 (动态修改)
 
 除了静态的 JSON 修改，开发者还可以通过 Python 脚本在运行时获取原生 UI 的实例，并对其进行动态修改（如隐藏控件、修改文本、绑定新事件等）。
